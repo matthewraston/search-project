@@ -39,17 +39,21 @@ app.get('/search', function (req, res) {
         });
 
         res.on('end', function () {
-            var results = JSON.parse(data);
-            gifResult.url = results["data"][0]["embed_url"];
+            gifSearchSuccess(data);
         });
     }).on('error', function (e) {
         console.log("Got error: " + e.message);
     });
 
-    console.log(gifResult.gif);
-    res.render('results', {
-        gifResult: gifResult
-    });
+    var gifSearchSuccess = function (response) {
+        var results = JSON.parse(response);
+        gifResult = results["data"][0]["images"]["fixed_height"]["url"];
+
+        res.render('results', {
+            gifResult: gifResult
+        });
+    }
+
 });
 
 // error handling
