@@ -1,4 +1,19 @@
+<h3>gifs</h3>
+<div class="gifResultDiv" style="overflow: auto;">
+    {{#each gifResults}}
+    <div class="gif" style="width: 300px; margin: 10px 0 10px 20px; position: relative; float: left;">
+        <img src="{{this.url}}" width="300px">
+        <br />
+        <span style="word-wrap: break-word;">{{this.url}}</span>
+    </div>
+    {{/each}}
+</div>
+<h3>urls</h3>
 <div>
-    <h3>results</h3>
-    <img src="{{gifResult}}">
+    {{#each majesticSearchResults}}
+    <p>
+        <a href="{{this.url}}">{{this.url}}</a> ({{this.trustFlow}})
+        <br />{{this.title}}
+    </p>
+    {{/each}}
 </div>
