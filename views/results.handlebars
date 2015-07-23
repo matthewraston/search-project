@@ -1,3 +1,16 @@
+{{#if sponsoredResults.length}}
+<h3>sponsored</h3>
+<div class="gifResultDiv" style="overflow: auto;">
+    {{#each sponsoredResults}}
+    <div class="gif" style="width: 300px; margin: 10px 0 10px 20px; position: relative; float: left;">
+        <img src="{{this}}" width="300px">
+        <br />
+        <span style="word-wrap: break-word;">{{this}}</span>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+{{#if gifResults.length}}
 <h3>gifs</h3>
 <div class="gifResultDiv" style="overflow: auto;">
     {{#each gifResults}}
@@ -8,6 +21,8 @@
     </div>
     {{/each}}
 </div>
+{{/if}}
+{{#if majesticSearchResults.length}}
 <h3>urls</h3>
 <div>
     {{#each majesticSearchResults}}
@@ -17,3 +32,7 @@
     </p>
     {{/each}}
 </div>
+{{/if}}
+{{#if noResults}}
+<p>Sorry, this almost never happens...</p>
+{{/if}}
