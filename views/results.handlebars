@@ -1,23 +1,71 @@
+<style>
+     body {
+        background-image:none
+    }
+    h3 {
+        clear: both;
+    }
+    .gifResultDiv {
+        text-align: center;
+    }
+    .biggif {
+        width: 800px; 
+        margin: 0 auto; 
+        position: relative;
+    }
+        .biggif img {
+            width: 800px;
+        }
+    .gifthumbs {
+        width: 800px; 
+        margin: 0 auto; 
+        position: relative;
+    }
+    .gif {
+        width: 180px;
+        position: relative; 
+        float: left;
+    }
+        .gif img {
+            width: 180px;
+        }
+    .gifurl {
+        word-wrap: break-word;
+    }
+</style>
 {{#if sponsoredResults.length}}
 <h3>sponsored</h3>
-<div class="gifResultDiv" style="overflow: auto;">
+<div class="gifResultDiv">
     {{#each sponsoredResults}}
-    <div class="gif" style="width: 300px; margin: 10px 0 10px 20px; position: relative; float: left;">
-        <img src="{{this}}" width="300px">
-        <br />
-        <span style="word-wrap: break-word;">{{this}}</span>
-    </div>
+        {{#unless @index}}
+        <div class="biggif">
+            <img src="{{this}}">
+            <br />
+            <span class="gifurl">{{this}}</span>
+        </div>
+        {{/unless}}
     {{/each}}
+    <div class="gifthumbs">
+    {{#each sponsoredResults}}
+        {{#if @index}}
+        <div class="gif" style="{{#if @last}} margin: 10px 10px 0 10px;{{else}} margin: 10px 10px 0 10px;{{/if}}">
+            <img src="{{this}}">
+            <br />
+            <span class="gifurl">{{this}}</span>
+        </div>
+        {{/if}}
+    {{/each}}
+    </div>
 </div>
 {{/if}}
 {{#if gifResults.length}}
 <h3>gifs</h3>
-<div class="gifResultDiv" style="overflow: auto;">
+<div class="gifResultDiv">
     {{#each gifResults}}
-    <div class="gif" style="width: 300px; margin: 10px 0 10px 20px; position: relative; float: left;">
-        <img src="{{this.url}}" width="300px">
+    <div class="gif" style="margin: 10px 0 10px 20px;">
+        <img src="{{this.url}}">
         <br />
-        <span style="word-wrap: break-word;">{{this.url}}</span>
+        <span class="gifurl">{{this.url}}</span>
     </div>
     {{/each}}
 </div>
@@ -34,5 +82,10 @@
 </div>
 {{/if}}
 {{#if noResults}}
-<p>Sorry, this almost never happens...</p>
+<div class="noResults">
+    <p>
+        <img src="http://31.media.tumblr.com/accf791f219739b74eb610c343a07cbb/tumblr_n11pkqDHv51t0nw3lo1_500.gif"><br />
+        Sorry, this almost never happens...
+    </p>
+</div>
 {{/if}}

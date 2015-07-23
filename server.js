@@ -20,14 +20,17 @@ require('./staticcontent')(app);
 
 // routes
 app.get('/', function (req, res) {
-    res.render('index');
+    var randomGif = sponsoredGifs[Math.floor(Math.random() * (sponsoredGifs.length - 1))];
+    res.render('index', {
+        gif: randomGif
+    });
 });
 
 // exclusion list for common words
 var exclusionList = [
     "the", "to", "on", "in", "off", "am", "is", "are", "was", "were", "been",
     "be", "can", "has", "shall", "will", "do", "does", "did", "have", "should",
-    "may", "might", "would", "must", "could", "had"
+    "may", "might", "would", "must", "could", "had", "of"
 ];
 
 // global list of sponsored gifs
@@ -221,6 +224,10 @@ var sponsoredGifs = [
         tags: "b99, brooklyn, nine, nine-nine, smile, excited"
     },
     {
+        url: "http://i.imgur.com/xxLByfM.gif",
+        tags: "b99, brooklyn, nine, nine-nine, hot, damn"
+    },
+    {
         url: "http://i.imgur.com/Eey3gPg.gif",
         tags: "the, it, crowd, not, listening"
     },
@@ -323,6 +330,46 @@ var sponsoredGifs = [
     {
         url: "http://www.reactiongifs.us/wp-content/uploads/2014/03/fellow_kids_steve_buscemi.gif",
         tags: "steve, stevef, fitzpas, hello, fellow, kids, how, do, you, do"
+    },
+    {
+        url: "http://ic.pics.livejournal.com/lostacanthus/9391304/223996/223996_original.gif",
+        tags: "community, thumbs, up, abed"
+    },
+    {
+        url: "http://i.imgur.com/cGRddvY.gif",
+        tags: "community, fuck, you, middle, finger, swag, guitar, guitars, troy, abed, pierce"
+    },
+    {
+        url: "http://i.imgur.com/6EiwdC1.gif",
+        tags: "community, cool, abed"
+    },
+    {
+        url: "http://i.imgur.com/Y82ad.gif",
+        tags: "community, troy, dont, eat, the, crab, dip, yeah"
+    },
+    {
+        url: "http://www.movingimage.us/images/exhibitions/media/reaction_gif/troy-abed-community.gif",
+        tags: "community, troy, abed, agree, point"
+    },
+    {
+        url: "http://www.reactiongifs.com/r/wrong-gif.gif",
+        tags: "community, wrong, jeff"
+    },
+    {
+        url: "http://i.imgur.com/lQCPfP2.gif",
+        tags: "community, troy, thumbs, up, smile, party, hat"
+    },
+    {
+        url: "http://i.imgur.com/Retvnms.gif",
+        tags: "community, hot, damn, annie"
+    },
+    {
+        url: "http://media2.giphy.com/media/qHho9D3nk3nS8/giphy.gif",
+        tags: "modern, family, phil, thumbs, up, point"
+    },
+    {
+        url: "http://i.imgur.com/BgrgQT8.gif",
+        tags: "harpreet, buff, gym, indian, muscle, flex"
     }
 ];
 
@@ -341,7 +388,7 @@ app.get('/search', function (req, res) {
     gifsloop: for(var i = 0; i < sponsoredGifs.length; i++)
     {
         // only show 5 results
-        if (sponsoredResults.length >= 3)
+        if (sponsoredResults.length >= numGifResults)
         {
             break gifsloop;
         }
@@ -352,7 +399,6 @@ app.get('/search', function (req, res) {
             // next loop if search component is in the exclusion list
             if (exclusionList.indexOf(searchComponents[j].toLowerCase()) > -1)
             {
-                console.log("got here: " + searchComponents[j]);
                 continue searchtermloop;
             }
 
