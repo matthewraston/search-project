@@ -6,8 +6,6 @@ app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
 var Handlebars = require('handlebars');
-var HandlebarsIntl = require('handlebars-intl');
-HandlebarsIntl.registerWith(Handlebars);
 
 // configure app
 app.engine('handlebars', exphbs({
