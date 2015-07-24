@@ -2,46 +2,38 @@
      body {
         background-image:none
     }
-    h3 {
-        clear: both;
-    }
-    .gifResultDiv {
-        text-align: center;
-    }
-    .biggif {
-        width: 100%; 
-        margin: 0 auto; 
-        position: relative;
-    }
-        .biggif img {
-            width: 100%;
-        }
-    .gifthumbs {
-        width: 800px; 
-        margin: 0 auto; 
-        position: relative;
-    }
-    .gif {
-        width: 180px;
-        position: relative; 
-        float: left;
-    }
-        .gif img {
-            width: 180px;
-        }
-    .gifurl {
-        word-wrap: break-word;
-    }
 </style>
+
+<script>
+    $( document ).ready(function() {
+        // make selected gif the main focus
+        $('img.gifimg').click(function(){
+            // get urls
+            var smallImg = $(this).attr('src');
+            var bigImg = $("#biggifimg").attr('src');
+
+            // swap images
+            $("#biggifimg").attr('src', smallImg);
+            $(this).attr('src', bigImg);
+
+            // swap urls
+            $(this).closest('div').find("span").text(bigImg);
+            $("#biggifimgurl").text(smallImg);
+
+            return false;
+        });
+    });
+</script>
+
 <div class="searchBoxResults">
     <div class="searchLogo">
-        <h1>
-            Matt'll Search It
-        </h1>
+        <a href="/">
+            <h1>Matt'll Search It</h1>
+        </a>
     </div>
     <div class="searchForm">
         <form action="/search" class="searchForm">
-            <input type="text" class="searchTerm" name="searchTerm" />
+            <input type="text" class="searchTerm" name="searchTerm" value="{{searchTerm}}"/>
             <input type="submit" class="searchSubmit" value=""/>
         </form>
     </div>
@@ -51,9 +43,9 @@
     {{#each sponsoredResults}}
         {{#unless @index}}
         <div class="biggif">
-            <img src="{{this}}">
+            <img src="{{this.url}}" id="biggifimg">
             <br />
-            <span class="gifurl">{{this}}</span>
+            <span class="gifurl" id="biggifimgurl">{{this.url}}</span>
         </div>
         {{/unless}}
     {{/each}}
@@ -61,9 +53,9 @@
     {{#each sponsoredResults}}
         {{#if @index}}
         <div class="gif" style="{{#if @last}} margin: 10px 10px 0 10px;{{else}} margin: 10px 10px 0 10px;{{/if}}">
-            <img src="{{this}}">
+            <img src="{{this.url}}" class="gifimg">
             <br />
-            <span class="gifurl">{{this}}</span>
+            <span class="gifurl" id="gifimgurl">{{this.url}}</span>
         </div>
         {{/if}}
     {{/each}}
@@ -95,9 +87,7 @@
 {{/if}}
 {{#if noResults}}
 <div class="noResults">
-    <p>
-        <img src="http://31.media.tumblr.com/accf791f219739b74eb610c343a07cbb/tumblr_n11pkqDHv51t0nw3lo1_500.gif"><br />
-        Sorry, this almost never happens...
-    </p>
+    <img src="http://31.media.tumblr.com/accf791f219739b74eb610c343a07cbb/tumblr_n11pkqDHv51t0nw3lo1_500.gif"><br />
+    Sorry, this almost never happens...
 </div>
 {{/if}}

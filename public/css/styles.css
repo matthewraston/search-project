@@ -18,7 +18,7 @@ body {
         color: #00C5FF;
     }
 .searchBox {
-    width: 100%;
+    margin: 20% auto;
     text-align: center;
     background: rgba(229, 229, 229, 0.5);
     padding-left: 15px;
@@ -67,4 +67,60 @@ body {
     background-position: -224px -53px;
     vertical-align: top;
     margin: 0 0 3px;
+}
+.aboutMattll {
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    color: #fff;
+}
+    .aboutMattll a {
+        text-decoration: none;
+    }
+        .aboutMattll a:visited {
+            color: #fff;
+        }
+        .aboutMattll a:hover {
+            text-decoration: underline;
+        }
+a {
+    text-decoration: none;
+}
+h3 {
+    clear: both;
+}
+.gifResultDiv {
+    text-align: center;
+    padding-top: 76px;
+}
+.biggif {
+    width: 80%; 
+    margin: 0 auto; 
+    position: relative;
+}
+    .biggif img {
+        width: 80%;
+    }
+.gifthumbs {
+    width: 800px; 
+    margin: 0 auto; 
+    position: relative;
+}
+.gif {
+    width: 180px;
+    position: relative; 
+    float: left;
+}
+    .gif img {
+        width: 180px;
+    }
+.gifurl {
+    word-wrap: break-word;
+}
+.noResults {
+    padding-top: 76px; 
+    text-align: center;
+}
+.noResults img {
+    width: 100%;
 }

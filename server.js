@@ -367,6 +367,14 @@ var sponsoredGifs = [
     {
         url: "http://i.imgur.com/BgrgQT8.gif",
         tags: "harpreet, buff, gym, indian, muscle, flex"
+    },
+    {
+        url: "http://i.imgur.com/M78oa6v.gif",
+        tags: "dog, smile"
+    },
+    {
+        url: "http://i.imgur.com/E8gfNu0.gif",
+        tags: "racoon, roll, rolling, hallway, keep"
     }
 ];
 
@@ -378,18 +386,13 @@ app.get('/search', function (req, res) {
     var gifResults = [];
     var majesticSearchResults = [];
     var sponsoredResults = [];
+    var sponsoredGifResults = [];
     var numGifResults = 5;
 
     // check the search term against sponsored gifs...
     var searchComponents = searchTerm.split(" ");
     gifsloop: for(var i = 0; i < sponsoredGifs.length; i++)
     {
-        // only show 5 results
-        if (sponsoredResults.length >= numGifResults)
-        {
-            break gifsloop;
-        }
-
         var tags = sponsoredGifs[i]["tags"].split(", ");
         searchtermloop: for(var j = 0; j < searchComponents.length; j++)
         {
@@ -399,16 +402,55 @@ app.get('/search', function (req, res) {
                 continue searchtermloop;
             }
 
+            // task - more occurences in tags, more search relevence
             tagsloop: for(var k = 0; k < tags.length; k++)
             {
                 // match - add to gif results, next gif loop
                 if(searchComponents[j].toLowerCase() == tags[k].toLowerCase())
                 {
-                    sponsoredResults.push(sponsoredGifs[i]["url"]);
-                    continue gifsloop;
+                    // search sponsoredResults to see if the gif has already been found
+                    // and add 1 to its score
+                    var exists = 0;
+                    for(var l = 0; l < sponsoredResults.length; l++)
+                    {
+                        var gif = sponsoredResults[l];
+                        if (gif.url == sponsoredGifs[i]["url"])
+                        {
+                            gif.score++;
+                            gif.tags += " " + tags[k].toLowerCase();
+                            exists = 1;
+                        }
+                    }
+
+                    if (!exists)
+                    {
+                        // otherwise, create a new result
+                        var gif = ({url: sponsoredGifs[i]["url"], score: 1, tags: tags[k].toLowerCase()});
+                        sponsoredResults.push(gif);
+                    }
                 }
             }
         }
+    }
+    // order by score
+    sponsoredResults.sort(function (a, b) {
+        if (a.score > b.score) {
+            return -1;
+        }
+        if (a.score < b.score) {
+            return 1;
+        }
+        // a must be equal to b
+        return 0;
+    });
+    // only show 5 results
+    if (sponsoredResults.length >= numGifResults)
+    {
+        sponsoredGifResults = sponsoredResults.splice(0, 5);
+    }
+    else
+    {
+        sponsoredGifResults = sponsoredResults.splice(0, sponsoredResults.length);
     }
 
     // do a majestic search
@@ -482,15 +524,16 @@ app.get('/search', function (req, res) {
         }
 
         var noResults;
-        if (gifResults.length == 0 && majesticSearchResults.length == 0 && sponsoredResults.length == 0)
+        if (gifResults.length == 0 && majesticSearchResults.length == 0 && sponsoredGifResults.length == 0)
         {
             noResults = 1;
         }
 
         res.render('results', {
+            searchTerm: searchTerm,
             gifResults: gifResults,
             majesticSearchResults: majesticSearchResults,
-            sponsoredResults: sponsoredResults,
+            sponsoredResults: sponsoredGifResults,
             noResults: noResults
         });
     }
