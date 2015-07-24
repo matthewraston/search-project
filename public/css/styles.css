@@ -18,11 +18,22 @@ body {
         color: #00C5FF;
     }
 .searchBox {
-    margin: 20% auto;
+    width: 100%;
     text-align: center;
+    background: rgba(229, 229, 229, 0.5);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.searchBoxResults {
+    width: 100%;
+    text-align: center;
+    background: rgba(229, 229, 229, 0.5);
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    z-index: 1;
 }
 .searchForm {
-    background-color: #e5e5e5;
     padding: 5px 3px 0;
     display: inline-block;
 }
@@ -41,7 +52,6 @@ body {
     outline: none;
     -webkit-appearance: none;
     border-right: 1px solid;
-    border-color: #ccc;
     box-sizing: content-box;
     position: relative;
     height: 40px;

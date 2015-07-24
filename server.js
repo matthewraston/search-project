@@ -20,10 +20,7 @@ require('./staticcontent')(app);
 
 // routes
 app.get('/', function (req, res) {
-    var randomGif = sponsoredGifs[Math.floor(Math.random() * (sponsoredGifs.length - 1))];
-    res.render('index', {
-        gif: randomGif
-    });
+    res.render('index');
 });
 
 // exclusion list for common words
