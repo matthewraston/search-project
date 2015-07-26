@@ -7,6 +7,11 @@ app.engine('handlebars', exphbs({
 }));
 var Handlebars = require('handlebars');
 
+// may need a different key?
+var YouTube = require('youtube-node');
+var youTube = new YouTube();
+youTube.setKey('AIzaSyB1OOSpTREs85WUMvIgJvLTZKye4BVsoFU');
+
 // configure app
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
@@ -387,6 +392,7 @@ app.get('/search', function (req, res) {
     var majesticSearchResults = [];
     var sponsoredResults = [];
     var sponsoredGifResults = [];
+    var youtubeResults = [];
     var numGifResults = 5;
 
     // check the search term against sponsored gifs...
@@ -494,6 +500,24 @@ app.get('/search', function (req, res) {
         }
     }
 
+    youTube.search(searchTerm, 1, function(error, result) {
+        if (error) {
+            console.log(error);
+        }
+        else {
+            var jsonResult = JSON.stringify(result);
+            var videoResults = JSON.parse(jsonResult);
+            if (videoResults["items"].length > 0)
+            {
+                var video = {
+                    "id": videoResults["items"][0]["id"]["videoId"],
+                    "title": videoResults["items"][0]["snippet"]["title"]
+                };
+                youtubeResults.push(video);
+            }
+        }
+    });
+
     // do a giphy search
     http.get("http://api.giphy.com/v1/gifs/search?q=" + gifSearch + "&api_key=dc6zaTOxFJmzC&limit=" + numGifResults + "&fmt=json", function (res) {
         // add gif results to gifResults
@@ -524,7 +548,7 @@ app.get('/search', function (req, res) {
         }
 
         var noResults;
-        if (gifResults.length == 0 && majesticSearchResults.length == 0 && sponsoredGifResults.length == 0)
+        if (gifResults.length == 0 && majesticSearchResults.length == 0 && sponsoredGifResults.length == 0 && youtubeResults.length == 0)
         {
             noResults = 1;
         }
@@ -534,6 +558,7 @@ app.get('/search', function (req, res) {
             gifResults: gifResults,
             majesticSearchResults: majesticSearchResults,
             sponsoredResults: sponsoredGifResults,
+            youtubeResults: youtubeResults,
             noResults: noResults
         });
     }
