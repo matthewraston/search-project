@@ -546,7 +546,7 @@ app.get('/search', function (req, res) {
             for (var i = 0; i < results["data"].length; i++)
             {
                 gifResults.push({
-                    url: results["data"][i]["images"]["fixed_height"]["url"]
+                    url: results["data"][i]["images"]["original"]["url"]
                 });
             }
         }
