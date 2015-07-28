@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 var exclusionList = [
     "the", "to", "on", "in", "off", "am", "is", "are", "was", "were", "been",
     "be", "can", "has", "shall", "will", "do", "does", "did", "have", "should",
-    "may", "might", "would", "must", "could", "had", "of"
+    "may", "might", "would", "must", "could", "had", "of", "it"
 ];
 
 // global list of sponsored gifs
@@ -380,6 +380,10 @@ var sponsoredGifs = [
     {
         url: "http://i.imgur.com/E8gfNu0.gif",
         tags: "racoon, roll, rolling, hallway, keep"
+    },
+    {
+        url: "http://media0.giphy.com/media/rgHiXa9AMQaQw/200.gif",
+        tags: "open, door, swag, style, awesome"
     }
 ];
 
