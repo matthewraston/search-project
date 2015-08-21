@@ -384,11 +384,20 @@ var sponsoredGifs = [
     {
         url: "http://media0.giphy.com/media/rgHiXa9AMQaQw/200.gif",
         tags: "open, door, swag, style, awesome"
+    },
+    {
+        url: "http://i.imgur.com/NIsHR8v.jpg",
+        tags: "safe"
     }
 ];
 
 app.get('/search', function (req, res) {
     var searchTerm = req.query.searchTerm;
+    var mode = 0;
+    if (req.query.mode)
+    {
+        mode = 1;
+    }
     console.log("searched for: " + searchTerm);
 
     var gifSearch = searchTerm.replace(/ /g, '+');
@@ -559,6 +568,7 @@ app.get('/search', function (req, res) {
 
         res.render('results', {
             searchTerm: searchTerm,
+            mode: mode,
             gifResults: gifResults,
             majesticSearchResults: majesticSearchResults,
             sponsoredResults: sponsoredGifResults,

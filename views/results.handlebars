@@ -1,9 +1,22 @@
+{{#if mode}}
+<style>
+     body {
+        background-image:none;
+        background:rgba(0,0,0,0.9);
+        -webkit-filter: blur(15px);
+        -moz-filter: blur(15px);
+        -o-filter: blur(15px);
+        -ms-filter: blur(15px);
+        filter: blur(15px);
+    }
+</style>
+{{else}}
 <style>
      body {
         background-image:none
     }
 </style>
-
+{{/if}}
 <script>
     $( document ).ready(function() {
         // make selected gif the main focus
