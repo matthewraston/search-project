@@ -442,6 +442,42 @@ var sponsoredGifs = [
     {
         url: "http://i.imgur.com/ZBEqUej.gif",
         tags: "stop, girl"
+    },
+    {
+        url: "http://24.media.tumblr.com/8bab1a47117f17b7dc6ac1d850a331f9/tumblr_ms8x03ZObJ1s2wo6co1_400.gif",
+        tags: "tina, fey, high, five, point"
+    },
+    {
+        url: "http://i.imgur.com/w8mSch7.gif",
+        tags: "tina, fey, thumbs, up"
+    },
+    {
+        url: "http://www.movingimage.us/images/exhibitions/media/reaction_gif/nope-tracy-jordan.gif",
+        tags: "tracey, morgan, no, nope, hell, no"
+    },
+    {
+        url: "http://i.imgur.com/VLsdeap.gif",
+        tags: "alastair, thats, my, fetish"
+    },
+    {
+        url: "http://gifs.gifme.io/i/fb2568b6b5.gif",
+        tags: "oooo, ooooh, oooh, cat"
+    },
+    {
+        url: "http://31.media.tumblr.com/4dfc5199fa920ff4566ede871f4e9857/tumblr_inline_n58htpFlM41szdaf5.gif",
+        tags: "matt, mattll, matt'll, we, have, a, gif, for, that"
+    },
+    {
+        url: "http://33.media.tumblr.com/bb11a3f6d420cfd54af86e281ada4616/tumblr_nels64g9mG1s48ibpo1_500.gif",
+        tags: "gasp, andy"
+    },
+    {
+        url: "http://i.imgur.com/dPYWMET.gif",
+        tags: "dont, care"
+    },
+    {
+        url: "http://gifs.gifbin.com/042011/1303921718_ralph-wiggum-discovers-easter-eggs.gif",
+        tags: "easter, egg"
     }
 ];
 
