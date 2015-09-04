@@ -3,12 +3,7 @@ body {
     margin: 0;
     overflow: auto;
     font-family: Verdana,Arial,Helvetica,sans-serif;
-    font-size: 14px;
-    background: url(http://i.imgur.com/xpqt0rt.gif) no-repeat center center fixed; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover;
-    -o-background-size: cover; 
-    background-size: cover;
+    font-size: 14px; 
 }
 .searchLogo {
     margin: 0 21px 0 0;
@@ -89,17 +84,20 @@ a {
 h3 {
     clear: both;
 }
+.clearfloat {
+    clear: both;
+}
 .gifResultDiv {
     text-align: center;
     padding-top: 76px;
 }
 .biggif {
-    width: 80%; 
+    width: 60%; 
     margin: 0 auto; 
     position: relative;
 }
     .biggif img {
-        width: 80%;
+        width: 60%;
     }
 .gifthumbs {
     width: 800px; 

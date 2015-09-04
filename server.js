@@ -25,7 +25,11 @@ require('./staticcontent')(app);
 
 // routes
 app.get('/', function (req, res) {
-    res.render('index');
+    // get random gif backgroundGif
+    var backgroundGif = backgroundGifs[Math.floor(Math.random()*backgroundGifs.length)];
+   res.render('index', {
+        backgroundGif: backgroundGif
+   });
 });
 
 // exclusion list for common words
@@ -35,8 +39,14 @@ var exclusionList = [
     "may", "might", "would", "must", "could", "had", "of", "it"
 ];
 
+var backgroundGifs = ["http://i.imgur.com/xpqt0rt.gif", "http://i.imgur.com/b4VFbMq.gif"];
+
 // global list of sponsored gifs
 var sponsoredGifs = [
+    {
+        url: "http://i.imgur.com/xpqt0rt.gif",
+        tags: "office, karen, shrug, impression"
+    },
     {
         url: "http://i.imgur.com/067JD.gif",
         tags: "tim, dance, rave, long, timothy"
@@ -388,6 +398,50 @@ var sponsoredGifs = [
     {
         url: "http://i.imgur.com/NIsHR8v.jpg",
         tags: "safe"
+    },
+    {
+        url: "http://ak-hdl.buzzfed.com/static/2015-05/31/16/enhanced/webdr07/anigif_enhanced-buzz-24879-1433105746-7.gif",
+        tags: "limsan, stop, whining, woman, up"
+    },
+    {
+        url: "http://media.giphy.com/media/HVr4gFHYIqeti/giphy.gif",
+        tags: "going, on, an, adventure, hobbit"
+    },
+    {
+        url: "http://media.giphy.com/media/aKrVpcf1NxjRS/giphy.gif",
+        tags: "i, know, what, i, fucking, said"
+    },
+    {
+        url: "http://media2.giphy.com/media/CuNDSZsB4W9PO/giphy.gif",
+        tags: "drinking, beer, german, market"
+    },
+    {
+        url: "http://media2.giphy.com/media/YFIn0ICJFwGNa/200.gif",
+        tags: "im, so, happy"
+    },
+    {
+        url: "http://i.imgur.com/l4fOevB.gif",
+        tags: "i'll, ill, allow, it, senor, chang, community"
+    },
+    {
+        url: "http://i.imgur.com/uqMrxRZ.gif",
+        tags: "respect, tip, hat, cap, cool"
+    },
+    {
+        url: "http://i.imgur.com/XS5LK.gif",
+        tags: "i, understood, that, reference, cap, captain, america, avengers"
+    },
+    {
+        url: "http://i.imgur.com/8TP1Cx6.gif",
+        tags: "thats, a, bold, strategy, cotton, lets, see, if, it, pays, off, espn8, ocho, dodgeball"
+    },
+    {
+        url: "http://www.bite.ca/wp-content/uploads/2012/05/cool-abeds-dance.gif",
+        tags: "fujayel, abed, dance, community"
+    },
+    {
+        url: "http://i.imgur.com/ZBEqUej.gif",
+        tags: "stop, girl"
     }
 ];
 
@@ -406,7 +460,7 @@ app.get('/search', function (req, res) {
     var sponsoredResults = [];
     var sponsoredGifResults = [];
     var youtubeResults = [];
-    var numGifResults = 5;
+    var numGifResults = 6;
 
     // check the search term against sponsored gifs...
     var searchComponents = searchTerm.split(" ");
@@ -463,7 +517,7 @@ app.get('/search', function (req, res) {
         return 0;
     });
     // only show 5 results
-    if (sponsoredResults.length >= numGifResults)
+    if (sponsoredResults.length >= 5)
     {
         sponsoredGifResults = sponsoredResults.splice(0, 5);
     }
@@ -473,7 +527,7 @@ app.get('/search', function (req, res) {
     }
 
     // do a majestic search
-    http.get("http://api.majestic.com/api/json?app_api_key=CD7525F601EA2CE773BDD24A220358C1&cmd=SearchByKeyword&count=" + numGifResults + "&datasource=fresh&scope=2&query=" + searchTerm, function (res) {
+    http.get("http://api.majestic.com/api/json?app_api_key=CD7525F601EA2CE773BDD24A220358C1&cmd=SearchByKeyword&count=5&datasource=fresh&scope=2&query=" + searchTerm, function (res) {
         var data = "";
 
         res.on('data', function (chunk) {

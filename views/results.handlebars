@@ -47,6 +47,9 @@
     <div class="searchForm">
         <form action="/search" class="searchForm">
             <input type="text" class="searchTerm" name="searchTerm" value="{{searchTerm}}"/>
+            {{#if mode}}
+            <input type="hidden" name="mode" value="{{mode}}"/>
+            {{/if}}
             <input type="submit" class="searchSubmit" value=""/>
         </form>
     </div>
@@ -75,16 +78,10 @@
     </div>
 </div>
 {{/if}}
-{{#if youtubeResults.length}}
-<div class="gifResultDiv" style="margin-top: 10px;">
-    {{#each youtubeResults}}
-    <iframe title="{{this.title}}" src="http://www.youtube.com/embed/{{this.id}}" width="480px" height="390px"></iframe>
-    {{/each}}
-</div>
-{{/if}}
+<br class="clearfloat" />
 {{#if gifResults.length}}
-<h3>gifs</h3>
 <div class="gifResultDiv">
+    <h3>Giphy results</h3>
     {{#each gifResults}}
     <div class="gif" style="margin: 10px 0 10px 20px;">
         <img src="{{this.url}}">
@@ -94,6 +91,15 @@
     {{/each}}
 </div>
 {{/if}}
+<br class="clearfloat" />
+{{#if youtubeResults.length}}
+<div class="gifResultDiv" style="margin-top: 10px;">
+    {{#each youtubeResults}}
+    <iframe title="{{this.title}}" src="http://www.youtube.com/embed/{{this.id}}" width="480px" height="390px"></iframe>
+    {{/each}}
+</div>
+{{/if}}
+<br class="clearfloat" />
 {{#if majesticSearchResults.length}}
 <h3>urls</h3>
 <div>
