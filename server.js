@@ -1,3 +1,5 @@
+var https = require('https');
+
 var express = require('express');
 var app = express();
 var exphbs = require('express-handlebars');
@@ -99,8 +101,8 @@ app.post('/api/slack', function (req, res) {
                 text: response
             });
             
-            var webhookRequest = http.request({
-                protocol: 'https',
+            var webhookRequest = https.request({
+                protocol: 'https:',
                 host: 'hooks.slack.com',
                 path: '/services/T08PZKSKE/B0AF9HQMT/hcvh5x17tEDVw6iGlBCseNvZ',
                 method: 'POST',
