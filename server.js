@@ -68,9 +68,8 @@ app.post('/api/slack', function (req, res) {
     var userName = req.body.user_name;
     var teamDomain = req.body.team_domain;
     var channel = req.body.channel_name;
-    
-    if(apiToken != 'fSqJPkndarzV0bNVZ4IwhJKE')
-    {
+
+    if (apiToken != 'fSqJPkndarzV0bNVZ4IwhJKE') {
         console.log('rejecting slack request from ' + teamDomain + '.slack.com with invalid token.');
         res.status(401).send('Invalid token.');
         return;
@@ -96,28 +95,30 @@ app.post('/api/slack', function (req, res) {
         }
 
         if (response != undefined) {
-            var payload = 'payload=' + JSON.stringify({
+            var payload = 'payload=' + encodeURIComponent(JSON.stringify({
                 channel: '#' + channel,
                 text: response
-            });
-            
+            }));
+
             var webhookRequest = https.request({
                 protocol: 'https:',
                 host: 'hooks.slack.com',
                 path: '/services/T08PZKSKE/B0AF9HQMT/hcvh5x17tEDVw6iGlBCseNvZ',
                 method: 'POST',
                 headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
                     'Content-Length': Buffer.byteLength(payload, 'utf8')
                 }
             });
-            
+
             webhookRequest.on('error', function (e) {
                 console.log("Got error: " + e.message);
                 res.send('Woops! We got an error: ' + e.message);
             });
-            
-            webhookRequest.write(payload);
+
+            webhookRequest.write(payload, 'utf8');
             webhookRequest.end();
+            res.send();
         } else {
             res.send('Sorry - could not find anything!');
         }
