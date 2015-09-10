@@ -103,7 +103,7 @@ function error500(res, error) {
     res.status(500).render('errors/500');
 }
 
-var server = app.listen(3000, function () {
+var server = app.listen(process.env.PORT || 3000, function () {
 
     var host = server.address().address;
     var port = server.address().port;
