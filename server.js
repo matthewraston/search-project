@@ -68,6 +68,7 @@ app.post('/api/slack', function (req, res) {
     var userName = req.body.user_name;
     var teamDomain = req.body.team_domain;
     var channel = req.body.channel_name;
+    var channelId = req.body.channel_id;
 
     if (apiToken != 'fSqJPkndarzV0bNVZ4IwhJKE') {
         console.log('rejecting slack request from ' + teamDomain + '.slack.com with invalid token.');
@@ -98,7 +99,7 @@ app.post('/api/slack', function (req, res) {
             response = userName + ' searched for "' + searchTerm + '" - ' + response;
             
             var payload = 'payload=' + encodeURIComponent(JSON.stringify({
-                channel: '#' + channel,
+                channel: channelId,
                 text: response
             }));
 
