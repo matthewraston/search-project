@@ -69,8 +69,18 @@ app.post('/api/slack', function (req, res) {
     var teamDomain = req.body.team_domain;
     var channel = req.body.channel_name;
     var channelId = req.body.channel_id;
+    
+    var expectedToken = process.env.SLACK_TOKEN;
+    var slackPath = process.env.SLACK_PATH;
+    
+    if(!expectedToken || !slackPath)
+    {
+        console.log('Invalid slack setup.');
+        res.status(500).send('Invalid settings.');
+        return;
+    }
 
-    if (apiToken != 'W4DWfFkEAV96K5gaW3CeaBq4') {
+    if (apiToken != expectedToken) {
         console.log('rejecting slack request from ' + teamDomain + '.slack.com with invalid token.');
         res.status(401).send('Invalid token.');
         return;
@@ -106,7 +116,7 @@ app.post('/api/slack', function (req, res) {
             var webhookRequest = https.request({
                 protocol: 'https:',
                 host: 'hooks.slack.com',
-                path: '/services/T0256QS73/B0AFFMG4W/vGr4ORrkhwZuo0PKwowLpDTl',
+                path: slackPath,
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
