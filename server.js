@@ -65,30 +65,59 @@ app.post('/api/slack', function (req, res) {
     var apiToken = req.body.token;
     var userName = req.body.user_name;
     var teamDomain = req.body.team_domain;
+    var channel = req.body.channel_name;
+    
+    if(apiToken != 'fSqJPkndarzV0bNVZ4IwhJKE')
+    {
+        console.log('rejecting slack request from ' + teamDomain + '.slack.com with invalid token.');
+        res.status(401).send('Invalid token.');
+        return;
+    }
 
-    console.log(userName + " searched from " + teamDomain + ".slack for: " + searchTerm);
+    console.log(userName + " searched from " + teamDomain + ".slack (" + channel + ") for: " + searchTerm);
 
     searchProvider.query(searchTerm, function (results) {
         var response;
 
         if (results.sponsoredResults.length > 0) {
             response = results.sponsoredResults[Math.floor(Math.random() * results.sponsoredResults.length)];
-            response = response.url;
+            response = "<" + response.url + ">";
         } else if (results.gifResults.length > 0) {
             response = results.gifResults[Math.floor(Math.random() * results.gifResults.length)];
-            response = response.url;
+            response = "<" + response.url + ">";
         } else if (results.youtubeResults.length > 0) {
             response = results.youtubeResults[Math.floor(Math.random() * results.youtubeResults.length)];
-            response = response.title + ' - https://www.youtube.com/watch?v=' + response.id;
+            response = "<" + "https://www.youtube.com/watch?v=" + response.id + "|" + response.title + ">";
         } else if (results.majesticSearchResults.length > 0) {
             response = results.majesticSearchResults[Math.floor(Math.random() * results.majesticSearchResults.length)];
-            response = response.title + ' (' + response.trustFlow + ' TF) - ' + response.url;
+            response = "<" + response.url + "|" + response.title + " (" + response.trustFlow + " TF)>";
         }
 
         if (response != undefined) {
-            res.send(response);
+            var payload = 'payload=' + JSON.stringify({
+                channel: '#' + channel,
+                text: response
+            });
+            
+            var webhookRequest = http.request({
+                protocol: 'https',
+                host: 'hooks.slack.com',
+                path: '/services/T08PZKSKE/B0AF9HQMT/hcvh5x17tEDVw6iGlBCseNvZ',
+                method: 'POST',
+                headers: {
+                    'Content-Length': Buffer.byteLength(payload, 'utf8')
+                }
+            });
+            
+            webhookRequest.on('error', function (e) {
+                console.log("Got error: " + e.message);
+                res.send('Woops! We got an error: ' + e.message);
+            });
+            
+            webhookRequest.write(payload);
+            webhookRequest.end();
         } else {
-            res.status(204);
+            res.send('Sorry - could not find anything!');
         }
     });
 });
