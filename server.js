@@ -95,6 +95,8 @@ app.post('/api/slack', function (req, res) {
         }
 
         if (response != undefined) {
+            response = userName + ' searched for "' + searchTerm + '" - ' + response;
+            
             var payload = 'payload=' + encodeURIComponent(JSON.stringify({
                 channel: '#' + channel,
                 text: response
