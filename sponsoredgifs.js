@@ -9,439 +9,439 @@ module.exports = {
     sponsoredGifs: [
         {
             url: "http://i.imgur.com/xpqt0rt.gif",
-            tags: "office, karen, shrug, impression"
+            tags: ["office", "karen", "shrug", "impression"]
         },
         {
             url: "http://i.imgur.com/067JD.gif",
-            tags: "tim, dance, rave, long, timothy"
+            tags: ["tim", "dance", "rave", "long", "timothy"]
         },
         {
             url: "http://i.imgur.com/k3IukIS.gif",
-            tags: "maybe, not, fuck, you, yourself, mark, whalberg"
+            tags: ["maybe", "not", "fuck", "you", "yourself", "mark", "whalberg"]
         },
         {
             url: "http://i.imgur.com/JolxCAB.gif",
-            tags: "shut, up, point"
+            tags: ["shut", "up", "point"]
         },
         {
             url: "http://i.imgur.com/zlwAn.gif",
-            tags: "ha, fuck, you, kanye, west"
+            tags: ["ha", "fuck", "you", "kanye", "west"]
         },
         {
             url: "http://i.imgur.com/ATeJY.gif",
-            tags: "good, job, fist, bump, handshake, fail"
+            tags: ["good", "job", "fist", "bump", "handshake", "fail"]
         },
         {
             url: "http://i.imgur.com/ZVq46.gif",
-            tags: "suprise, supplies, racist"
+            tags: ["suprise", "supplies", "racist"]
         },
         {
             url: "http://i.imgur.com/zBjp1OG.gif",
-            tags: "excellent, thumbs, up"
+            tags: ["excellent", "thumbs", "up"]
         },
         {
             url: "http://i.imgur.com/BNeufNH.gif",
-            tags: "polish, polishing, gun, salute, lick, licking, lips"
+            tags: ["polish", "polishing", "gun", "salute", "lick", "licking", "lips"]
         },
         {
             url: "http://i.imgur.com/v45lXnM.gif",
-            tags: "oh, i, like, that"
+            tags: ["oh", "i", "like", "that"]
         },
         {
             url: "http://i.imgur.com/vvhZhUc.gif",
-            tags: "minions, yay, cheer, clap"
+            tags: ["minions", "yay", "cheer", "clap"]
         },
         {
             url: "http://i.imgur.com/TwEYLwE.gif",
-            tags: "nice, got, game, of, thrones, lannister"
+            tags: ["nice", "got", "game", "of", "thrones", "lannister"]
         },
         {
             url: "http://i.imgur.com/1rpqkYk.jpg",
-            tags: "get, fucked, simon, pegg, shaun, of, the, dead"
+            tags: ["get", "fucked", "simon", "pegg", "shaun", "of", "the", "dead"]
         },
         {
             url: "http://i.imgur.com/bSYLra2.jpg",
-            tags: "haters, gonna, hate, spray"
+            tags: ["haters", "gonna", "hate", "spray"]
         },
         {
             url: "http://i.imgur.com/7C3z0.gif",
-            tags: "thats, waisis, racist"
+            tags: ["thats", "waisis", "racist"]
         },
         {
             url: "http://i.imgur.com/1iyOm62.jpg",
-            tags: "jim, the, office, yes"
+            tags: ["jim", "the", "office", "yes"]
         },
         {
             url: "http://i.imgur.com/NIVsFp9.gif",
-            tags: "this, is, tough, michael, scott, the, office"
+            tags: ["this", "is", "tough", "michael", "scott", "the", "office"]
         },
         {
             url: "http://i.imgur.com/u3gXqFK.gif",
-            tags: "this, is, the, worst, michael, scott, the, office"
+            tags: ["this", "is", "the", "worst", "michael", "scott", "office"]
         },
         {
             url: "http://i.imgur.com/FoalZNw.gif",
-            tags: "nope, jim, the, office"
+            tags: ["nope", "jim", "the", "office"]
         },
         {
             url: "http://25.media.tumblr.com/3dce1b99635522b64e1cc4ef69d9a6bc/tumblr_mhbnkszwRr1r6epwko4_r1_250.gif",
-            tags: "get, your, sweet, ass, out, of, here, before, i, do, something, crazy, the, office, erin"
+            tags: ["get", "your", "sweet", "ass", "out", "of", "here", "before", "i", "do", "something", "crazy", "the", "office", "erin"]
         },
         {
             url: "http://i.giphy.com/5wWf7GW1AzV6pF3MaVW.gif",
-            tags: "pam, jim, high, five, the, office"
+            tags: ["pam", "jim", "high", "five", "the", "office"]
         },
         {
             url: "http://24.media.tumblr.com/493b7094c4842b79c41a3016ccfdc676/tumblr_mz5ytsXBOP1qmfruwo2_250.gif",
-            tags: "oh, my, god, its, happening, the, office, michael, scott"
+            tags: ["oh", "my", "god", "its", "happening", "the", "office", "michael", "scott"]
         },
         {
             url: "http://i.imgur.com/0f9a5Qp.gif",
-            tags: "it, all, happened, so, fast, kevin, the, office"
+            tags: ["it", "all", "happened", "so", "fast", "kevin", "the", "office"]
         },
         {
             url: "http://replygif.net/i/272.gif",
-            tags: "no, god, the, office, michael, scott"
+            tags: ["no", "god", "the", "office", "michael", "scott"]
         },
         {
             url: "http://i.imgur.com/3wxS5dZ.gif",
-            tags: "bitch, ryan, the, office"
+            tags: ["bitch", "ryan", "the", "office"]
         },
         {
             url: "http://31.media.tumblr.com/3973d9726d6a7f3c9e7e24ebdbcbb192/tumblr_mqwa9veB521rynk4uo1_500.gif",
-            tags: "this, is, bullshit, shit, the, office, michael, scott, wedding"
+            tags: ["this", "is", "bullshit", "shit", "the", "office", "michael", "scott", "wedding"]
         },
         {
             url: "http://i46.tinypic.com/4u9our.gif",
-            tags: "thanks, for, the, info, michael, scott, the, office, point"
+            tags: ["thanks", "for", "the", "info", "michael", "scott", "office", "point"]
         },
         {
             url: "http://i.imgur.com/I3I217P.gif",
-            tags: "sorry, i, annoyed, you, with, friendship, friend, andy, the, office"
+            tags: ["sorry", "i", "annoyed", "you", "with", "friendship", "friend", "andy", "the", "office"]
         },
         {
             url: "http://24.media.tumblr.com/b67868fdbdf9b0d380e1ef546a64bd1e/tumblr_mxrkkdSy0D1qgiq62o1_500.gif",
-            tags: "jlaw, law, jennifer, lawrence, hmmm, ok, sure"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "hmmm", "ok", "sure"]
         },
         {
             url: "http://25.media.tumblr.com/a590f435dc771a5fdcbf69d3f60880ae/tumblr_n1o8f5Bxoj1s9q9dro4_r1_250.gif",
-            tags: "jlaw, law, jennifer, lawrence, yeah, yes, fist, pump"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "yeah", "yes", "fist", "pump"]
         },
         {
             url: "https://31.media.tumblr.com/843b30370a6fe74beeac8be3d5d6fff3/tumblr_inline_n2wuk8uJyA1ri1boe.gif",
-            tags: "jlaw, law, jennifer, lawrence, were, gonna, die"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "were", "gonna", "die"]
         },
         {
             url: "http://25.media.tumblr.com/c3a013a0d02045530c21151fb1fb3932/tumblr_mr1aqjoiW61snnccgo2_250.gif",
-            tags: "jlaw, law, jennifer, lawrence, crazy, laugh, ha"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "crazy", "laugh", "ha"]
         },
         {
             url: "http://31.media.tumblr.com/ba2de30560320ebcda29d386c107c4f5/tumblr_mr9vl6wdvi1s3am50o6_500.gif",
-            tags: "jlaw, law, jennifer, lawrence, what, no, idea"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "what", "no", "idea"]
         },
         {
             url: "http://31.media.tumblr.com/aaa7d9c849407ab4c6db4432a555e056/tumblr_mj1k17kIL61qfjyrro1_500.gif",
-            tags: "jlaw, law, jennifer, lawrence, wink"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "wink"]
         },
         {
             url: "http://25.media.tumblr.com/89f353e1b6a90845673b29eecc8e2ad3/tumblr_mzdbkaRymV1rjqnnfo1_500.gif",
-            tags: "jlaw, law, jennifer, lawrence, wheres, the, pizza"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "wheres", "the", "pizza"]
         },
         {
             url: "http://25.media.tumblr.com/73227be3f7515705da2f2834eae8cfc8/tumblr_n1vb2dDthH1rp3edho2_500.gif",
-            tags: "jlaw, law, jennifer, lawrence, pizza, fixes, everything"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "pizza", "fixes", "everything"]
         },
         {
             url: "http://media.tumblr.com/be76b3fb0c6f9756da126784df8e0478/tumblr_inline_mjb1rbfoRd1qz4rgp.gif",
-            tags: "jlaw, law, jennifer, lawrence, oh, my, god"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "oh", "my", "god"]
         },
         {
             url: "http://media.tumblr.com/f44136e3856f28df4fb0aec45ed66bd2/tumblr_inline_mi2ly8j3Kc1qz4rgp.gif",
-            tags: "jlaw, law, jennifer, lawrence, meh, dunno, dont, know, shrug"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "meh", "dunno", "dont", "know", "shrug"]
         },
         {
             url: "http://rack.0.mshcdn.com/media/ZgkyMDEzLzA5LzEyLzc4L2plbm5pZmVybGF3LjVkMDk4LmdpZgpwCXRodW1iCTg1MHg1OTA-CmUJanBn/2ce4f512/b74/jennifer-lawrence.jpg",
-            tags: "jlaw, law, jennifer, lawrence, im, starving, hungry"
+            tags: ["jlaw", "law", "jennifer", "lawrence", "im", "starving", "hungry"]
         },
         {
             url: "http://25.media.tumblr.com/4975ffc536cdfb0f67a915733eddc32e/tumblr_n2v7d0M7Wb1r64iyzo7_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, yes"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "yes"]
         },
         {
             url: "http://25.media.tumblr.com/6485f5bdacc349034c2d3a730d8e0441/tumblr_n0d9h7M4lC1sfso15o2_r1_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, point, nod"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "point", "nod"]
         },
         {
             url: "http://25.media.tumblr.com/16a15f086acef6d200be73a5b2775647/tumblr_mtawats7u21qatzuvo1_r1_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, smack, computer, doesnt, work"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "smack", "computer", "doesnt", "work"]
         },
         {
             url: "http://25.media.tumblr.com/bbbba5bb6f9beae792a7831b0fff6a73/tumblr_n2cpmw92j01rhjaxao1_r1_500.gif",
-            tags: "b99, brooklyn, nine, nine-nine, fist, bump"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "fist", "bump"]
         },
         {
             url: "http://31.media.tumblr.com/5f0e2771cc05ef33b55ee2d6b0e562bf/tumblr_n2otdzIjmR1sm8qcpo4_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, smart"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "smart"]
         },
         {
             url: "http://24.media.tumblr.com/c231c49db5ec334bc5e284d5e388dbc3/tumblr_n2v5hnuM1U1tv1iqko2_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, what"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "what"]
         },
         {
             url: "http://24.media.tumblr.com/5ac7fb6748524de93bbdfc76a2963ccd/tumblr_n2v7d0M7Wb1r64iyzo3_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, lonely, eating, all, by, myself, sad"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "lonely", "eating", "all", "by", "myself", "sad"]
         },
         {
             url: "http://24.media.tumblr.com/a3f1a08f5897ba1d3f484bea26316e40/tumblr_n30te5kRIR1qe3p9bo2_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, what, does, that, even, mean"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "what", "does", "that", "even", "mean"]
         },
         {
             url: "http://31.media.tumblr.com/e0b2480316833c3f619d281d766c65ab/tumblr_n322l4KkbL1qeztjpo4_250.gif",
-            tags: "b99, brooklyn, nine, nine-nine, smile, excited"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "smile", "excited"]
         },
         {
             url: "http://i.imgur.com/xxLByfM.gif",
-            tags: "b99, brooklyn, nine, nine-nine, hot, damn"
+            tags: ["b99", "brooklyn", "nine", "nine-nine", "hot", "damn"]
         },
         {
             url: "http://i.imgur.com/Eey3gPg.gif",
-            tags: "the, it, crowd, not, listening"
+            tags: ["the", "it", "crowd", "not", "listening"]
         },
         {
             url: "http://i.imgur.com/ET0qANB.gif",
-            tags: "the, it, crowd, really"
+            tags: ["the", "it", "crowd", "really"]
         },
         {
             url: "http://i.imgur.com/zToUeDY.gif",
-            tags: "the, it, crowd, god, goddamn, right, we, are"
+            tags: ["the", "it", "crowd", "god", "goddamn", "right", "we", "are"]
         },
         {
             url: "http://i.imgur.com/xvODbd3.gif",
-            tags: "the, it, crowd, now, that, makes, sense, point"
+            tags: ["the", "it", "crowd", "now", "that", "makes", "sense", "point"]
         },
         {
             url: "http://s3-ak.buzzfeed.com/static/2014-03/tmp/webdr02/6/10/anigif_4388c3e9ea2653ef4c2b9aee78bec2a2-13.gif",
-            tags: "friends, im, not, even, sorry, joey"
+            tags: ["friends", "im", "not", "even", "sorry", "joey"]
         },
         {
             url: "http://images.tangomag.com/sites/default/files/image_list/tampax-commercial.gif",
-            tags: "friends, clap, joey, chandler, applause"
+            tags: ["friends", "clap", "joey", "chandler", "applause"]
         },
         {
             url: "http://static.tumblr.com/ut9qusm/Z3lm27ije/sb.gif",
-            tags: "friends, ross, forced, smile, fake"
+            tags: ["friends", "ross", "forced", "smile", "fake"]
         },
         {
             url: "http://25.media.tumblr.com/tumblr_magn76pxdR1rxbaego1_500.gif",
-            tags: "friends, joey, im, sorry, speech, marks, quotes, quotation, fake, not"
+            tags: ["friends", "joey", "im", "sorry", "speech", "marks", "quotes", "quotation", "fake", "not"]
         },
         {
             url: "http://31.media.tumblr.com/813f0b6ebe01406b860552a6924bcfdb/tumblr_mq8rtvjfzm1rvn11po2_250.gif",
-            tags: "friends, joey, go, get, a beer"
+            tags: ["friends", "joey", "go", "get", "a beer"]
         },
         {
             url: "http://media.tumblr.com/21ceda19ed2a77e318b99957b836fae1/tumblr_inline_mkzjtpkesL1qz4rgp.gif",
-            tags: "friends, i, have, no, idea, whats, what, is, going, on, but, im, excited, confusion, chandler"
+            tags: ["friends", "i", "have", "no", "idea", "whats", "what", "is", "going", "on", "but", "im", "excited", "confusion", "chandler"]
         },
         {
             url: "http://24.media.tumblr.com/57590501f9f114ef2ce90ce3dd2728b2/tumblr_n571mqE2LZ1qfcx4to2_250.gif",
-            tags: "friends, no, noooo, rachel"
+            tags: ["friends", "no", "noooo", "rachel"]
         },
         {
             url: "http://img-2.onedio.com/img/719/bound/2r0/53cf6f97fcb59be70dc736ea.gif",
-            tags: "friends, point, smile, joey, chandler"
+            tags: ["friends", "point", "smile", "joey", "chandler"]
         },
         {
             url: "http://s3-ec.buzzfed.com/static/2014-07/7/13/enhanced/webdr06/anigif_enhanced-buzz-15059-1404752785-9.gif",
-            tags: "friends, yay, cheer, applause, rachel, pheobe"
+            tags: ["friends", "yay", "cheer", "applause", "rachel", "pheobe"]
         },
         {
             url: "http://media.giphy.com/media/JPsFUPp3vLS5q/giphy.gif",
-            tags: "friends, thumbs, up, joey, chandler"
+            tags: ["friends", "thumbs", "up", "joey", "chandler"]
         },
         {
             url: "http://i.imgur.com/YXe4sMy.gif",
-            tags: "friends, no, idea, whats, what, is, going, on, laugh, joey"
+            tags: ["friends", "no", "idea", "whats", "what", "is", "going", "on", "laugh", "joey"]
         },
         {
             url: "http://gifs.gifme.io/i/fa0daf8d89.gif",
-            tags: "help, is, on, the, way, mrs, doubtfire"
+            tags: ["help", "is", "on", "the", "way", "mrs", "doubtfire"]
         },
         {
             url: "http://24.media.tumblr.com/b83893185509190459f88f18705a5eb0/tumblr_mjq4uxQ2Hx1qgojgxo1_250.gif",
-            tags: "lots, of, wink, milana, vayntrub"
+            tags: ["lots", "of", "wink", "milana", "vayntrub"]
         },
         {
             url: "http://1.bp.blogspot.com/--2pNZLzyuKI/UuzPSLHMxHI/AAAAAAAAP8c/hO0Qzg2xpq0/s1600/terrrific.gif",
-            tags: "terrific"
+            tags: ["terrific"]
         },
         {
             url: "http://25.media.tumblr.com/tumblr_m3k5sueZCY1qbx51ho1_250.gif",
-            tags: "thumbs, up, eating, lean"
+            tags: ["thumbs", "up", "eating", "lean"]
         },
         {
             url: "http://weknowgifs.com/wp-content/uploads/2013/03/ha-gay-gif.gif",
-            tags: "ha, gay, community, chang"
+            tags: ["ha", "gay", "community", "chang"]
         },
         {
             url: "http://37.media.tumblr.com/9cdfe96fa6c430bc8122ffb87a950d44/tumblr_mk31vklp5O1s9n4cro1_500.gif",
-            tags: "burn, ashton, kutcher"
+            tags: ["burn", "ashton", "kutcher"]
         },
         {
             url: "http://i.imgur.com/ZzQzSAq.gif",
-            tags: "champagne, spray, bottle, glasses, spit"
+            tags: ["champagne", "spray", "bottle", "glasses", "spit"]
         },
         {
             url: "http://i.imgur.com/03LFCen.gif",
-            tags: "coke, spray, bottle, spit"
+            tags: ["coke", "spray", "bottle", "spit"]
         },
         {
             url: "http://media.tumblr.com/c0f0d53d2bdbf4c95786a5b62236b579/tumblr_inline_mt5g1hGdrt1rmbzz2.gif",
-            tags: "something, somethings, fuck, fucky"
+            tags: ["something", "somethings", "fuck", "fucky"]
         },
         {
             url: "http://media.tumblr.com/tumblr_mc0kuckMPY1r0eaxj.gif",
-            tags: "bin, bags, fuck, yeah, police"
+            tags: ["bin", "bags", "fuck", "yeah", "police"]
         },
         {
             url: "http://www.reactiongifs.us/wp-content/uploads/2014/03/fellow_kids_steve_buscemi.gif",
-            tags: "steve, stevef, fitzpas, hello, fellow, kids, how, do, you, do"
+            tags: ["steve", "stevef", "fitzpas", "hello", "fellow", "kids", "how", "do", "you"]
         },
         {
             url: "http://ic.pics.livejournal.com/lostacanthus/9391304/223996/223996_original.gif",
-            tags: "community, thumbs, up, abed"
+            tags: ["community", "thumbs", "up", "abed"]
         },
         {
             url: "http://i.imgur.com/cGRddvY.gif",
-            tags: "community, fuck, you, middle, finger, swag, guitar, guitars, troy, abed, pierce"
+            tags: ["community", "fuck", "you", "middle", "finger", "swag", "guitar", "guitars", "troy", "abed", "pierce"]
         },
         {
             url: "http://i.imgur.com/6EiwdC1.gif",
-            tags: "community, cool, abed"
+            tags: ["community", "cool", "abed"]
         },
         {
             url: "http://i.imgur.com/Y82ad.gif",
-            tags: "community, troy, dont, eat, the, crab, dip, yeah"
+            tags: ["community", "troy", "dont", "eat", "the", "crab", "dip", "yeah"]
         },
         {
             url: "http://www.movingimage.us/images/exhibitions/media/reaction_gif/troy-abed-community.gif",
-            tags: "community, troy, abed, agree, point"
+            tags: ["community", "troy", "abed", "agree", "point"]
         },
         {
             url: "http://www.reactiongifs.com/r/wrong-gif.gif",
-            tags: "community, wrong, jeff"
+            tags: ["community", "wrong", "jeff"]
         },
         {
             url: "http://i.imgur.com/lQCPfP2.gif",
-            tags: "community, troy, thumbs, up, smile, party, hat"
+            tags: ["community", "troy", "thumbs", "up", "smile", "party", "hat"]
         },
         {
             url: "http://i.imgur.com/Retvnms.gif",
-            tags: "community, hot, damn, annie"
+            tags: ["community", "hot", "damn", "annie"]
         },
         {
             url: "http://media2.giphy.com/media/qHho9D3nk3nS8/giphy.gif",
-            tags: "modern, family, phil, thumbs, up, point"
+            tags: ["modern", "family", "phil", "thumbs", "up", "point"]
         },
         {
             url: "http://i.imgur.com/BgrgQT8.gif",
-            tags: "harpreet, buff, gym, indian, muscle, flex"
+            tags: ["harpreet", "buff", "gym", "indian", "muscle", "flex"]
         },
         {
             url: "http://i.imgur.com/M78oa6v.gif",
-            tags: "dog, smile"
+            tags: ["dog", "smile"]
         },
         {
             url: "http://i.imgur.com/E8gfNu0.gif",
-            tags: "racoon, roll, rolling, hallway, keep"
+            tags: ["racoon", "roll", "rolling", "hallway", "keep"]
         },
         {
             url: "http://media0.giphy.com/media/rgHiXa9AMQaQw/200.gif",
-            tags: "open, door, swag, style, awesome"
+            tags: ["open", "door", "swag", "style", "awesome"]
         },
         {
             url: "http://i.imgur.com/NIsHR8v.jpg",
-            tags: "safe"
+            tags: ["safe"]
         },
         {
             url: "http://ak-hdl.buzzfed.com/static/2015-05/31/16/enhanced/webdr07/anigif_enhanced-buzz-24879-1433105746-7.gif",
-            tags: "limsan, stop, whining, woman, up"
+            tags: ["limsan", "stop", "whining", "woman", "up"]
         },
         {
             url: "http://media.giphy.com/media/HVr4gFHYIqeti/giphy.gif",
-            tags: "going, on, an, adventure, hobbit"
+            tags: ["going", "on", "an", "adventure", "hobbit"]
         },
         {
             url: "http://media.giphy.com/media/aKrVpcf1NxjRS/giphy.gif",
-            tags: "i, know, what, i, fucking, said"
+            tags: ["i", "know", "what", "fucking", "said"]
         },
         {
             url: "http://media2.giphy.com/media/CuNDSZsB4W9PO/giphy.gif",
-            tags: "drinking, beer, german, market"
+            tags: ["drinking", "beer", "german", "market"]
         },
         {
             url: "http://media2.giphy.com/media/YFIn0ICJFwGNa/200.gif",
-            tags: "im, so, happy"
+            tags: ["im", "so", "happy"]
         },
         {
             url: "http://i.imgur.com/l4fOevB.gif",
-            tags: "i'll, ill, allow, it, senor, chang, community"
+            tags: ["i'll", "ill", "allow", "it", "senor", "chang", "community"]
         },
         {
             url: "http://i.imgur.com/uqMrxRZ.gif",
-            tags: "respect, tip, hat, cap, cool"
+            tags: ["respect", "tip", "hat", "cap", "cool"]
         },
         {
             url: "http://i.imgur.com/XS5LK.gif",
-            tags: "i, understood, that, reference, cap, captain, america, avengers"
+            tags: ["i", "understood", "that", "reference", "cap", "captain", "america", "avengers"]
         },
         {
             url: "http://i.imgur.com/8TP1Cx6.gif",
-            tags: "thats, a, bold, strategy, cotton, lets, see, if, it, pays, off, espn8, ocho, dodgeball"
+            tags: ["thats", "a", "bold", "strategy", "cotton", "lets", "see", "if", "it", "pays", "off", "espn8", "ocho", "dodgeball"]
         },
         {
             url: "http://www.bite.ca/wp-content/uploads/2012/05/cool-abeds-dance.gif",
-            tags: "fujayel, abed, dance, community"
+            tags: ["fujayel", "abed", "dance", "community"]
         },
         {
             url: "http://i.imgur.com/ZBEqUej.gif",
-            tags: "stop, girl"
+            tags: ["stop", "girl"]
         },
         {
             url: "http://24.media.tumblr.com/8bab1a47117f17b7dc6ac1d850a331f9/tumblr_ms8x03ZObJ1s2wo6co1_400.gif",
-            tags: "tina, fey, high, five, point"
+            tags: ["tina", "fey", "high", "five", "point"]
         },
         {
             url: "http://i.imgur.com/w8mSch7.gif",
-            tags: "tina, fey, thumbs, up"
+            tags: ["tina", "fey", "thumbs", "up"]
         },
         {
             url: "http://www.movingimage.us/images/exhibitions/media/reaction_gif/nope-tracy-jordan.gif",
-            tags: "tracey, morgan, no, nope, hell, no"
+            tags: ["tracey", "morgan", "no", "nope", "hell"]
         },
         {
             url: "http://i.imgur.com/VLsdeap.gif",
-            tags: "alastair, thats, my, fetish"
+            tags: ["alastair", "thats", "my", "fetish"]
         },
         {
             url: "http://gifs.gifme.io/i/fb2568b6b5.gif",
-            tags: "oooo, ooooh, oooh, cat"
+            tags: ["oooo", "ooooh", "oooh", "cat"]
         },
         {
-            url: "http://31.media.tumblr.com/4dfc5199fa920ff4566ede871f4e9857/tumblr_inline_n58htpFlM41szdaf5.gif",
-            tags: "matt, mattll, matt'll, we, have, a, gif, for, that"
+            url: "http://31.media.tumblr.com/4dfc5199fa920ff4566ede871f4e9857hello41szdaf5.gif",
+            tags: ["matt", "mattll", "matt'll", "we", "have", "a", "gif", "for", "that"]
         },
         {
             url: "http://33.media.tumblr.com/bb11a3f6d420cfd54af86e281ada4616/tumblr_nels64g9mG1s48ibpo1_500.gif",
-            tags: "gasp, andy"
+            tags: ["gasp", "andy"]
         },
         {
             url: "http://i.imgur.com/dPYWMET.gif",
-            tags: "dont, care"
+            tags: ["dont", "care"]
         },
         {
             url: "http://gifs.gifbin.com/042011/1303921718_ralph-wiggum-discovers-easter-eggs.gif",
-            tags: "easter, egg"
+            tags: ["easter", "egg"]
         }
     ]
 }

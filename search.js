@@ -11,7 +11,7 @@ youTube.setKey('AIzaSyB1OOSpTREs85WUMvIgJvLTZKye4BVsoFU');
 var exclusionList = [
     "the", "to", "on", "in", "off", "am", "is", "are", "was", "were", "been",
     "be", "can", "has", "shall", "will", "do", "does", "did", "have", "should",
-    "may", "might", "would", "must", "could", "had", "of", "it"
+    "may", "might", "would", "must", "could", "had", "of", "it", "a"
 ];
 
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
             getYoutubePromise(query),
             getMajesticPromise(query),
         ])
-        .then(function(res) {
+        .then(function (res) {
             return callback({
                 sponsoredResults: res[0],
                 gifResults: res[1],
@@ -33,52 +33,45 @@ module.exports = {
     }
 }
 
-function getSponsoredGifsPromise(query)
-{
-    return new Promise(function(resolve, reject) {
+function getSponsoredGifsPromise(query) {
+    return new Promise(function (resolve, reject) {
         // check the search term against sponsored gifs...
         var searchComponents = query.split(" ");
         var sponsoredResults = [];
-        var sponsoredGifResults = [];
 
-        gifsloop: for (var i = 0; i < sponsoredGifs.length; i++) {
-            var tags = sponsoredGifs[i]["tags"].split(", ");
-            searchtermloop: for (var j = 0; j < searchComponents.length; j++) {
-                // next loop if search component is in the exclusion list
+        for (var i = 0; i < sponsoredGifs.length; i++) {
+            var sponsoredGif = sponsoredGifs[i];
+            var tags = sponsoredGif.tags;
+            var tagMatches = 0;
+
+            // Find number of matching tags
+            for (var j = 0; j < searchComponents.length; j++) {
+                // Ignore ones in exclusion list 
                 if (exclusionList.indexOf(searchComponents[j].toLowerCase()) > -1) {
-                    continue searchtermloop;
+                    continue;
                 }
 
-                // task - more occurences in tags, more search relevence
-                tagsloop: for (var k = 0; k < tags.length; k++) {
-                    // match - add to gif results, next gif loop
+                for (var k = 0; k < tags.length; k++) {
                     if (searchComponents[j].toLowerCase() == tags[k].toLowerCase()) {
-                        // search sponsoredResults to see if the gif has already been found
-                        // and add 1 to its score
-                        var exists = 0;
-
-                        for (var l = 0; l < sponsoredResults.length; l++) {
-                            var gif = sponsoredResults[l];
-                            if (gif.url == sponsoredGifs[i]["url"]) {
-                                gif.score++;
-                                gif.tags += " " + tags[k].toLowerCase();
-                                exists = 1;
-                            }
-                        }
-
-                        if (!exists) {
-                            // otherwise, create a new result
-                            var gif = ({
-                                url: sponsoredGifs[i]["url"],
-                                score: 1,
-                                tags: tags[k].toLowerCase()
-                            });
-
-                            sponsoredResults.push(gif);
-                        }
+                        tagMatches++;
                     }
                 }
             }
+
+            if (tagMatches == 0) {
+                continue;
+            }
+            
+            var score = tagMatches / searchComponents.length;
+
+            if (score <= 0.3 + 0.6 / searchComponents.length) {
+                continue;
+            }
+            
+            sponsoredResults.push({
+                url: sponsoredGifs[i]["url"],
+                score: score
+            });
         }
 
         // order by score
@@ -95,18 +88,15 @@ function getSponsoredGifsPromise(query)
 
         // only show 5 results
         if (sponsoredResults.length >= 5) {
-            sponsoredGifResults = sponsoredResults.splice(0, 5);
-        } else {
-            sponsoredGifResults = sponsoredResults.splice(0, sponsoredResults.length);
+            sponsoredResults = sponsoredResults.splice(0, 5);
         }
         
-        resolve(sponsoredGifResults);
+        resolve(sponsoredResults);
     });
 }
 
-function getMajesticPromise(query)
-{
-    return new Promise(function(resolve, reject) {
+function getMajesticPromise(query) {
+    return new Promise(function (resolve, reject) {
         // do a majestic search
         http.get("http://api.majestic.com/api/json?app_api_key=CD7525F601EA2CE773BDD24A220358C1&cmd=SearchByKeyword&count=5&datasource=fresh&scope=2&query=" + query, function (res) {
             var data = "";
@@ -144,45 +134,41 @@ function getMajesticPromise(query)
                 resolve(majesticSearchResults);
             });
         }).on('error', function (e) {
-            console.log("Got error: " + e.message);
+            console.log("Got error grabing Majestic data: " + e.message);
             reject(e);
         });
     });
 }
 
-function getYoutubePromise(query)
-{
-    return new Promise(function(resolve, reject) {
+function getYoutubePromise(query) {
+    return new Promise(function (resolve, reject) {
         youTube.search(query, 1, function (error, result) {
             if (error) {
-                console.log(error);
+                console.log("Got error getting YouTube result: " + error);
                 reject(error);
             } else {
-                var jsonResult = JSON.stringify(result);
-                var videoResults = JSON.parse(jsonResult);
                 var youtubeResults = [];
-                
-                if (videoResults["items"].length > 0) {
+
+                if (result["items"].length > 0) {
                     var video = {
-                        "id": videoResults["items"][0]["id"]["videoId"],
-                        "title": videoResults["items"][0]["snippet"]["title"]
+                        "id": result["items"][0]["id"]["videoId"],
+                        "title": result["items"][0]["snippet"]["title"]
                     };
-                    
+
                     youtubeResults.push(video);
                 }
-                
+
                 resolve(youtubeResults);
             }
         });
     });
 }
 
-function getGiphyPromise(query)
-{
-    return new Promise(function(resolve, reject) {
+function getGiphyPromise(query) {
+    return new Promise(function (resolve, reject) {
         var gifSearch = query.replace(/ /g, '+');
         var numGifResults = 6;
-        
+
         // do a giphy search
         http.get("http://api.giphy.com/v1/gifs/search?q=" + gifSearch + "&api_key=dc6zaTOxFJmzC&limit=" + numGifResults + "&fmt=json", function (res) {
             // add gif results to gifResults
@@ -205,7 +191,7 @@ function getGiphyPromise(query)
                 resolve(gifResults);
             });
         }).on('error', function (e) {
-            console.log("Got error: " + e.message);
+            console.log("Got error getting Giphy results: " + e.message);
             reject(e);
         });
     });
