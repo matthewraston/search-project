@@ -2,11 +2,6 @@ var http = require('http');
 var sponsoredGifs = require('./sponsoredgifs.js').sponsoredGifs;
 var Promise = require('promise');
 
-// may need a different key?
-var YouTube = require('youtube-node');
-var youTube = new YouTube();
-youTube.setKey('AIzaSyB1OOSpTREs85WUMvIgJvLTZKye4BVsoFU');
-
 // exclusion list for common words
 var exclusionList = [
     "the", "to", "on", "in", "off", "am", "is", "are", "was", "were", "been",
@@ -19,15 +14,11 @@ module.exports = {
         Promise.all([
             getSponsoredGifsPromise(query),
             getGiphyPromise(query),
-            getYoutubePromise(query),
-            getMajesticPromise(query),
         ])
         .then(function (res) {
             return callback({
                 sponsoredResults: res[0],
                 gifResults: res[1],
-                youtubeResults: res[2],
-                majesticSearchResults: res[3],
             });
         });
     }
@@ -92,75 +83,6 @@ function getSponsoredGifsPromise(query) {
         }
         
         resolve(sponsoredResults);
-    });
-}
-
-function getMajesticPromise(query) {
-    return new Promise(function (resolve, reject) {
-        // do a majestic search
-        http.get("http://api.majestic.com/api/json?app_api_key=CD7525F601EA2CE773BDD24A220358C1&cmd=SearchByKeyword&count=5&datasource=fresh&scope=2&query=" + query, function (res) {
-            var data = "";
-
-            res.on('data', function (chunk) {
-                data += chunk;
-            });
-
-            res.on('end', function () {
-                var parsedData = JSON.parse(data);
-                var majesticSearchResults = [];
-
-                if (parsedData["DataTables"]["Results"]["Data"].length > 0) {
-                    for (var i = 0; i < parsedData["DataTables"]["Results"]["Data"].length; i++) {
-                        majesticSearchResults.push({
-                            url: parsedData["DataTables"]["Results"]["Data"][i]["Item"],
-                            title: parsedData["DataTables"]["Results"]["Data"][i]["Title"],
-                            trustFlow: parsedData["DataTables"]["Results"]["Data"][i]["TrustFlow"]
-                        });
-                    }
-
-                    // order by Trust Flow
-                    majesticSearchResults.sort(function (a, b) {
-                        if (a.trustFlow > b.trustFlow) {
-                            return -1;
-                        }
-                        if (a.trustFlow < b.trustFlow) {
-                            return 1;
-                        }
-                        // a must be equal to b
-                        return 0;
-                    });
-                }
-
-                resolve(majesticSearchResults);
-            });
-        }).on('error', function (e) {
-            console.log("Got error grabing Majestic data: " + e.message);
-            reject(e);
-        });
-    });
-}
-
-function getYoutubePromise(query) {
-    return new Promise(function (resolve, reject) {
-        youTube.search(query, 1, function (error, result) {
-            if (error) {
-                console.log("Got error getting YouTube result: " + error);
-                reject(error);
-            } else {
-                var youtubeResults = [];
-
-                if (result["items"].length > 0) {
-                    var video = {
-                        "id": result["items"][0]["id"]["videoId"],
-                        "title": result["items"][0]["snippet"]["title"]
-                    };
-
-                    youtubeResults.push(video);
-                }
-
-                resolve(youtubeResults);
-            }
-        });
     });
 }
 

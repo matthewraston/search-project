@@ -48,15 +48,13 @@ app.get('/search', function (req, res) {
     console.log("searched for: " + searchTerm);
 
     searchProvider.query(searchTerm, function (results) {
-        var numberOfResults = results.gifResults.length + results.majesticSearchResults.length + results.sponsoredResults.length + results.youtubeResults.length;
+        var numberOfResults = results.gifResults.length + results.sponsoredResults.length;
 
         res.render('results', {
             searchTerm: searchTerm,
             mode: mode,
             gifResults: results.gifResults,
-            majesticSearchResults: results.majesticSearchResults,
             sponsoredResults: results.sponsoredResults,
-            youtubeResults: results.youtubeResults,
             noResults: numberOfResults == 0
         });
     });
@@ -97,12 +95,6 @@ app.post('/api/slack', function (req, res) {
         } else if (results.gifResults.length > 0) {
             response = results.gifResults[Math.floor(Math.random() * results.gifResults.length)];
             response = "<" + response.url + ">";
-        } else if (results.youtubeResults.length > 0) {
-            response = results.youtubeResults[Math.floor(Math.random() * results.youtubeResults.length)];
-            response = "<" + "https://www.youtube.com/watch?v=" + response.id + "|" + response.title + ">";
-        } else if (results.majesticSearchResults.length > 0) {
-            response = results.majesticSearchResults[Math.floor(Math.random() * results.majesticSearchResults.length)];
-            response = "<" + response.url + "|" + response.title + " (" + response.trustFlow + " TF)>";
         }
 
         if (response != undefined) {

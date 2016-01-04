@@ -345,7 +345,11 @@ module.exports = {
         },
         {
             url: "http://i.imgur.com/BgrgQT8.gif",
-            tags: ["harpreet", "buff", "gym", "indian", "muscle", "flex"]
+            tags: ["harpreet", "buff", "gym", "indian", "muscle", "flex", "swole"]
+        },
+        {
+            url: "http://i.imgur.com/O8iWC6j.gif",
+            tags: ["harpreet", "haircut", "grooming"]
         },
         {
             url: "http://i.imgur.com/M78oa6v.gif",
@@ -424,12 +428,20 @@ module.exports = {
             tags: ["alastair", "thats", "my", "fetish"]
         },
         {
-            url: "http://gifs.gifme.io/i/fb2568b6b5.gif",
-            tags: ["oooo", "ooooh", "oooh", "cat"]
+            url: "https://media2.giphy.com/media/8OCbpaR4Vn7OM/giphy.gif",
+            tags: ["alastair", "take", "off", "shirt", "finger", "bite", "hair", "flick"]
         },
         {
-            url: "http://31.media.tumblr.com/4dfc5199fa920ff4566ede871f4e9857hello41szdaf5.gif",
+            url: "http://gifs.gifme.io/i/fb2568b6b5.gif",
+            tags: ["oooo", "ooooh", "oooh", "cat", "ooo"]
+        },
+        {
+            url: "http://media1.giphy.com/media/swaXFSeBVHpHq/giphy.gif",
             tags: ["matt", "mattll", "matt'll", "we", "have", "a", "gif", "for", "that"]
+        },
+        {
+            url: "http://24.media.tumblr.com/tumblr_m0jz6zVYMR1qc9noeo1_400.gif",
+            tags: ["matt", "mattll", "matt'll", "we", "have", "a", "gif", "for", "that", "this", "is", "insanely", "brilliant", "it", "crowd"]
         },
         {
             url: "http://33.media.tumblr.com/bb11a3f6d420cfd54af86e281ada4616/tumblr_nels64g9mG1s48ibpo1_500.gif",
@@ -442,6 +454,114 @@ module.exports = {
         {
             url: "http://gifs.gifbin.com/042011/1303921718_ralph-wiggum-discovers-easter-eggs.gif",
             tags: ["easter", "egg"]
+        },
+        {
+            url: "https://31.media.tumblr.com/0eb4d7d9c5cdf70949ab37f61a0ef56f/tumblr_inline_nki1cfgfHy1t3pinv.gif",
+            tags: ["ervin"]
+        },
+        {
+            url: "http://i.imgur.com/SwZFJhm.gif",
+            tags: ["aqib", "stare"]
+        },
+        {
+            url: "http://i.imgur.com/uqMrxRZ.gif",
+            tags: ["cool"]
+        },
+        {
+            url: "http://i.imgur.com/OF0Ax0M.gif",
+            tags: ["you're", "welcome"]
+        },
+        {
+            url: "http://i.imgur.com/qYCJ6Qx.gif",
+            tags: ["its", "the", "coolest"]
+        },
+        {
+            url: "http://mrwgifs.com/wp-content/uploads/2013/05/James-Franco-As-Saul-Silver-Thank-You-Reaction-Gif-In-Pineapple-Express.gif",
+            tags: ["thanks", "man", "cheers"]
+        },
+        {
+            url: "http://i.imgur.com/AEBxNqc.gif",
+            tags: ["ill", "give", "you", "a", "hint", "yes", "obviously"]
+        },
+        {
+            url: "https://media.giphy.com/media/leWR6wEhj4hfG/giphy.gif",
+            tags: ["i", "ive", "seen", "seent", "it"]
+        },
+        {
+            url: "http://24.media.tumblr.com/cf4cae878aa102b8528e055b48d3aa03/tumblr_mqb94j4Uht1rwl09fo1_500.gif",
+            tags: ["come", "and", "join", "us", "one", "of"]
+        },
+        {
+            url: "https://media.giphy.com/media/2jvTUpp8WO1pu/giphy.gif",
+            tags: ["ervin", "kawaii"]
+        },
+        {
+            url: "https://i.imgur.com/HbMYKq9.jpg",
+            tags: ["dam", "son"]
+        },
+        {
+            url: "http://media.tumblr.com/7284a9fab160978ac3d22705124c8921/tumblr_inline_mrutq2mRiT1qbyjgz.gif",
+            tags: ["watching", "you"]
+        },
+        {
+            url: "http://media1.giphy.com/media/kGZ4jJguXT5C0/giphy.gif",
+            tags: ["yas"]
+        },
+        {
+            url: "http://i.imgur.com/y1Q8LFk.gif",
+            tags: ["when", "youre", "ready"]
+        },
+        {
+            url: "https://media1.giphy.com/media/VzLCpr2nwnjdC/200.gif",
+            tags: ["say", "when", "to", "stop", "size", "matters", "getting", "bigger"]
+        },
+        {
+            url: "http://media.tumblr.com/tumblr_lky7wj1HjB1qa0hoh.gif",
+            tags: ["hell", "no", "shake", "shakes", "finger"]
+        },
+        {
+            url: "https://media4.giphy.com/media/bqrG9EUt9vS4U/200.gif",
+            tags: ["oh", "boy"]
+        },
+        {
+            url: "http://i.imgur.com/Q6SzV6d.gif",
+            tags: ["olivia", "munn", "cream", "pie", "maid"]
+        },
+        {
+            url: "http://i.imgur.com/PcVwi60.gif",
+            tags: ["random", "example", "anything"]
+        },
+        {
+            url: "http://i.imgur.com/9Hq2ARP.gif",
+            tags: ["taylor", "swift", "flute"]
+        },
+        {
+            url: "http://33.media.tumblr.com/9454b770cd9e0e337052c7f45c5121d7/tumblr_ntdc2twVGT1shaaz3o1_500.gif",
+            tags: ["how", "was", "the", "demo", "that", "went", "badly", "obviously", "it"]
+        },
+        {
+            url: "http://i.imgur.com/dUPAhJY.gif",
+            tags: ["magic", "magical", "glitter", "fabulous"]
+        },
+        {
+            url: "http://i.imgur.com/v12uRAY.gif",
+            tags: ["twiddling", "twirling", "thumbs", "thumb", "nothing", "to", "do"]
+        },
+        {
+            url: "http://www.reactiongifs.us/wp-content/uploads/2013/02/not_even_mad.gif",
+            tags: ["im", "not", "even", "mad", "thats", "amazing"]
+        },
+        {
+            url: "http://www.reactiongifs.com/wp-content/uploads/2013/12/tft.gif",
+            tags: ["thats", "fucking", "true"]
+        },
+        {
+            url: "https://33.media.tumblr.com/49ee0de7c0b4571843563feb0d260f60/tumblr_inline_nq2xa7NafG1rhj3u9_500.gif",
+            tags: ["fuck", "logic"]
+        },
+        {
+            url: "http://media1.giphy.com/media/ZDBAUtamx09mU/giphy.gif",
+            tags: ["dancing", "girls"]
         }
     ]
 }

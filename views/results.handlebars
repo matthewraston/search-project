@@ -91,29 +91,3 @@
     {{/each}}
 </div>
 {{/if}}
-<br class="clearfloat" />
-{{#if youtubeResults.length}}
-<div class="gifResultDiv" style="margin-top: 10px;">
-    {{#each youtubeResults}}
-    <iframe title="{{this.title}}" src="http://www.youtube.com/embed/{{this.id}}" width="480px" height="390px"></iframe>
-    {{/each}}
-</div>
-{{/if}}
-<br class="clearfloat" />
-{{#if majesticSearchResults.length}}
-<h3>urls</h3>
-<div>
-    {{#each majesticSearchResults}}
-    <p>
-        <a href="{{this.url}}">{{this.url}}</a> ({{this.trustFlow}})
-        <br />{{this.title}}
-    </p>
-    {{/each}}
-</div>
-{{/if}}
-{{#if noResults}}
-<div class="noResults">
-    <img src="http://31.media.tumblr.com/accf791f219739b74eb610c343a07cbb/tumblr_n11pkqDHv51t0nw3lo1_500.gif"><br />
-    Sorry, this almost never happens...
-</div>
-{{/if}}
