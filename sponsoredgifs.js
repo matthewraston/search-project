@@ -308,6 +308,10 @@ module.exports = {
             tags: ["steve", "stevef", "fitzpas", "hello", "fellow", "kids", "how", "do", "you"]
         },
         {
+            url: "http://i.giphy.com/GrUhLU9q3nyRG.gif",
+            tags: ["steve", "stevef", "fitzpas", "old", "young"]
+        },
+        {
             url: "http://ic.pics.livejournal.com/lostacanthus/9391304/223996/223996_original.gif",
             tags: ["community", "thumbs", "up", "abed"]
         },
@@ -350,6 +354,10 @@ module.exports = {
         {
             url: "http://i.imgur.com/O8iWC6j.gif",
             tags: ["harpreet", "haircut", "grooming"]
+        },
+        {
+            url: "http://giant.gfycat.com/AnnualOrangeArachnid.gif",
+            tags: ["harpreet", "gym", "muscle"]
         },
         {
             url: "http://i.imgur.com/M78oa6v.gif",
@@ -464,8 +472,8 @@ module.exports = {
             tags: ["aqib", "stare"]
         },
         {
-            url: "http://i.imgur.com/uqMrxRZ.gif",
-            tags: ["cool"]
+            url: "https://i.imgur.com/dj8h9fR.gif",
+            tags: ["cool", "shades", "glasses", "point"]
         },
         {
             url: "http://i.imgur.com/OF0Ax0M.gif",
@@ -562,6 +570,38 @@ module.exports = {
         {
             url: "http://media1.giphy.com/media/ZDBAUtamx09mU/giphy.gif",
             tags: ["dancing", "girls"]
+        },
+        {
+            url: "http://i.imgur.com/u9I1O.gif",
+            tags: ["placement", "student", "first", "day"]
+        },
+        {
+            url: "http://i.imgur.com/MiC6C6l.gif",
+            tags: ["dollar", "dolla", "bills", "yall", "playa", "make", "it", "rain"]
+        },
+        {
+            url: "http://i.imgur.com/qzWxKeX.gif",
+            tags: ["clap", "wasnt", "listening", "reaction"]
+        },
+        {
+            url: "http://i.imgur.com/muyz7LA.gif",
+            tags: ["debugging", "debug", "code", "wtf"]
+        },
+        {
+            url: "http://i.imgur.com/3m4l0AR.gif",
+            tags: ["up", "point"]
+        },
+        {
+            url: "http://media.giphy.com/media/pAg23GBmnkrSM/giphy.gif",
+            tags: ["fuck", "off"]
+        },
+        {
+            url: "https://31.media.tumblr.com/575c2f02e52d55d221ca4ed2c234624b/tumblr_inline_ndmwveEQSe1sfuq1m.gif",
+            tags: ["well", "done", "do", "you", "want", "a", "fucking", "medal"]
+        },
+        {
+            url: "https://media.giphy.com/media/ME7fKTxMhQGd2/giphy.gif",
+            tags: ["food", "yum", "broadway2", "broadway", "2"]
         }
     ]
 }
