@@ -1,4 +1,4 @@
-var http = require('http');
+var https = require('https');
 var sponsoredGifs = require('./sponsoredgifs.js').sponsoredGifs;
 var Promise = require('promise');
 
@@ -92,7 +92,7 @@ function getGiphyPromise(query) {
         var numGifResults = 6;
 
         // do a giphy search
-        http.get("http://api.giphy.com/v1/gifs/search?q=" + gifSearch + "&api_key=dc6zaTOxFJmzC&limit=" + numGifResults + "&fmt=json", function (res) {
+        https.get("https://api.giphy.com/v1/gifs/search?q=" + gifSearch + "&api_key=dc6zaTOxFJmzC&limit=" + numGifResults + "&fmt=json", function (res) {
             // add gif results to gifResults
             var data = "";
 
